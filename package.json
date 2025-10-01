@@ -8,6 +8,10 @@
     "build": "eleventy",
     "debug": "DEBUG=Eleventy* eleventy"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brennanbrown/retroweird.git"
+  },
   "keywords": [
     "eleventy",
     "blog",
@@ -19,15 +23,17 @@
     "indieweb",
     "nostalgic"
   ],
-  "author": "Your Name",
+  "author": "Brennan Kenneth Brown <mail@brennanbrown.ca> (https://brennanbrown.ca)",
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "markdown-it": "^13.0.2",
     "markdown-it-attrs": "^4.1.6"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

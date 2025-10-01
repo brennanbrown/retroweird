@@ -4,7 +4,7 @@
 
 A maximalist, customizable blog theme for [Eleventy](https://www.11ty.dev/) inspired by GeoCities, MySpace, and the creative chaos of 1990s-2000s personal homepages.
 
-Created by [Brennan Kenneth Brown](https://brennanbrown.ca) | A [Berry House](https://berryhouse.ca) project
+Created by [Brennan Kenneth Brown](https://brennanbrown.ca) | A [🍓 Berry House](https://berryhouse.ca) project
 
 ![Version](https://img.shields.io/badge/version-1.0.0-ff00ff)
 ![Eleventy](https://img.shields.io/badge/eleventy-2.0+-00ffff)
@@ -35,7 +35,7 @@ Created by [Brennan Kenneth Brown](https://brennanbrown.ca) | A [Berry House](ht
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
@@ -84,7 +84,7 @@ Your site will be available at `http://localhost:8080`
 3. **Configure build settings**
    - **Build command**: `npm run build`
    - **Publish directory**: `_site`
-   - **Node version**: 14 or higher
+   - **Node version**: 18 or higher
 
 4. **Deploy!**
    - Click "Deploy site"
@@ -481,7 +481,7 @@ Feel free to use this theme for your own site! Attribution is appreciated but no
 - 🌐 [Demo Site](https://retroweird.netlify.app)
 - 💻 [GitHub Repository](https://github.com/brennanbrown/retroweird)
 - 👤 [Brennan's Portfolio](https://brennanbrown.ca)
-- 🏠 [Berry House](https://berryhouse.ca)
+- 🍓 [Berry House](https://berryhouse.ca)
 - 📚 [Eleventy Documentation](https://www.11ty.dev/docs/)
 - 🌍 [Neocities](https://neocities.org)
 - 🕸️ [IndieWeb](https://indieweb.org)

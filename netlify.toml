@@ -3,7 +3,7 @@
   publish = "_site"
 
 [build.environment]
-  NODE_VERSION = "14"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/feed"
