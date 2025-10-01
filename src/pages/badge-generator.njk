@@ -1,0 +1,298 @@
+---
+layout: layouts/page.njk
+title: 88x31 Badge Generator
+description: Create your own retro web badge!
+permalink: /badge-generator/
+---
+
+<div class="badge-generator-page">
+  <h1>🎨 Badge Generator</h1>
+  
+  <p class="intro">
+    Create your own 88x31 web badge! Customize the text, colors, and style, then download it for your site.
+  </p>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  <div class="generator-container">
+    
+    <div class="generator-controls">
+      <h2>Badge Settings</h2>
+      
+      <div class="form-group">
+        <label for="badge-text">Badge Text:</label>
+        <input type="text" id="badge-text" value="MY SITE" maxlength="12">
+      </div>
+      
+      <div class="form-group">
+        <label for="badge-text2">Second Line (optional):</label>
+        <input type="text" id="badge-text2" value="" maxlength="12">
+      </div>
+      
+      <div class="form-group">
+        <label for="bg-color">Background Color:</label>
+        <input type="color" id="bg-color" value="#FF00FF">
+      </div>
+      
+      <div class="form-group">
+        <label for="text-color">Text Color:</label>
+        <input type="color" id="text-color" value="#FFFFFF">
+      </div>
+      
+      <div class="form-group">
+        <label for="border-color">Border Color:</label>
+        <input type="color" id="border-color" value="#000000">
+      </div>
+      
+      <div class="form-group">
+        <label for="badge-style">Style:</label>
+        <select id="badge-style">
+          <option value="solid">Solid</option>
+          <option value="gradient">Gradient</option>
+          <option value="retro">Retro</option>
+          <option value="neon">Neon</option>
+        </select>
+      </div>
+      
+      <button onclick="updateBadge()" class="btn">Update Preview</button>
+    </div>
+    
+    <div class="generator-preview">
+      <h2>Preview</h2>
+      
+      <div class="preview-container">
+        <canvas id="badge-canvas" width="88" height="31"></canvas>
+      </div>
+      
+      <div class="preview-actions">
+        <button onclick="downloadBadge()" class="btn">📥 Download Badge</button>
+        <button onclick="copyBadgeCode()" class="btn">📋 Copy HTML Code</button>
+      </div>
+      
+      <div class="badge-code" style="display: none;">
+        <h3>HTML Code:</h3>
+        <pre id="badge-code-output"></pre>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  <div class="generator-tips">
+    <h2>💡 Tips</h2>
+    <ul>
+      <li><strong>Keep it short</strong> - 88x31 badges are tiny, so use 1-2 words max</li>
+      <li><strong>High contrast</strong> - Make sure text is readable against the background</li>
+      <li><strong>Test it</strong> - Preview your badge at actual size before downloading</li>
+      <li><strong>Share it</strong> - Add your badge to your site for others to link!</li>
+    </ul>
+  </div>
+  
+</div>
+
+<script>
+const canvas = document.getElementById('badge-canvas');
+const ctx = canvas.getContext('2d');
+
+function updateBadge() {
+  const text = document.getElementById('badge-text').value;
+  const text2 = document.getElementById('badge-text2').value;
+  const bgColor = document.getElementById('bg-color').value;
+  const textColor = document.getElementById('text-color').value;
+  const borderColor = document.getElementById('border-color').value;
+  const style = document.getElementById('badge-style').value;
+  
+  // Clear canvas
+  ctx.clearRect(0, 0, 88, 31);
+  
+  // Draw background based on style
+  if (style === 'gradient') {
+    const gradient = ctx.createLinearGradient(0, 0, 88, 31);
+    gradient.addColorStop(0, bgColor);
+    gradient.addColorStop(1, shadeColor(bgColor, -40));
+    ctx.fillStyle = gradient;
+  } else if (style === 'neon') {
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, 88, 31);
+    ctx.shadowColor = bgColor;
+    ctx.shadowBlur = 10;
+    ctx.fillStyle = bgColor;
+  } else {
+    ctx.fillStyle = bgColor;
+  }
+  
+  ctx.fillRect(2, 2, 84, 27);
+  
+  // Draw border
+  ctx.strokeStyle = borderColor;
+  ctx.lineWidth = 2;
+  ctx.strokeRect(1, 1, 86, 29);
+  
+  // Draw text
+  ctx.fillStyle = textColor;
+  ctx.font = 'bold 10px Arial';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  
+  if (text2) {
+    ctx.fillText(text.toUpperCase(), 44, 12);
+    ctx.fillText(text2.toUpperCase(), 44, 23);
+  } else {
+    ctx.fillText(text.toUpperCase(), 44, 16);
+  }
+  
+  // Reset shadow
+  ctx.shadowBlur = 0;
+}
+
+function shadeColor(color, percent) {
+  const num = parseInt(color.replace("#",""), 16);
+  const amt = Math.round(2.55 * percent);
+  const R = (num >> 16) + amt;
+  const G = (num >> 8 & 0x00FF) + amt;
+  const B = (num & 0x0000FF) + amt;
+  return "#" + (0x1000000 + (R<255?R<1?0:R:255)*0x10000 +
+    (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255))
+    .toString(16).slice(1);
+}
+
+function downloadBadge() {
+  const link = document.createElement('a');
+  link.download = 'my-badge.png';
+  link.href = canvas.toDataURL();
+  link.click();
+}
+
+function copyBadgeCode() {
+  const code = `<a href="https://yoursite.com"><img src="https://yoursite.com/images/badges/my-badge.png" alt="${document.getElementById('badge-text').value}" width="88" height="31"></a>`;
+  
+  navigator.clipboard.writeText(code).then(() => {
+    document.getElementById('badge-code-output').textContent = code;
+    document.querySelector('.badge-code').style.display = 'block';
+    alert('Badge code copied to clipboard!');
+  });
+}
+
+// Initial render
+updateBadge();
+
+// Update on input
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('input', updateBadge);
+});
+</script>
+
+<style>
+.badge-generator-page {
+  font-family: var(--font-body);
+}
+
+.intro {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.generator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .generator-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.generator-controls,
+.generator-preview {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #000;
+  border-style: ridge;
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  font-family: var(--font-body);
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+#badge-canvas {
+  border: 1px solid #000;
+  image-rendering: pixelated;
+  transform: scale(2);
+}
+
+.preview-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.preview-actions .btn {
+  flex: 1;
+  min-width: 150px;
+}
+
+.badge-code {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  border: 2px solid #000;
+}
+
+.badge-code pre {
+  background: #000;
+  color: #0f0;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+}
+
+.generator-tips {
+  background: rgba(255, 255, 0, 0.2);
+  border: 3px solid #000;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.generator-tips ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.generator-tips li {
+  margin-bottom: 0.5rem;
+}
+</style>
