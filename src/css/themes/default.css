@@ -1,0 +1,143 @@
+/* Default Theme - Classic GeoCities Style */
+
+.theme-default {
+  --primary-color: #ff00ff;
+  --secondary-color: #00ffff;
+  --accent-color: #ffff00;
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --link-color: #0000ff;
+  --link-visited: #800080;
+}
+
+.theme-default body {
+  background-color: #ff00ff;
+  background-image: url('/images/backgrounds/stars.gif');
+}
+
+.theme-default .content-wrapper {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: #000;
+}
+
+.theme-default .widget {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #000;
+}
+
+.theme-default .widget-title {
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+  font-weight: bold;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.theme-default .site-header {
+  background: linear-gradient(135deg, #ff00ff 0%, #00ffff 50%, #ffff00 100%);
+  border: 4px solid #000;
+  border-style: ridge;
+}
+
+.theme-default .site-footer {
+  background: linear-gradient(135deg, #ffff00 0%, #00ffff 50%, #ff00ff 100%);
+  border: 4px solid #000;
+  border-style: ridge;
+}
+
+.theme-default .nav-link {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.theme-default .nav-link:hover {
+  background: #ffff00;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.theme-default .nav-link.active {
+  background: #ff00ff;
+  color: #fff;
+  border-style: inset;
+}
+
+.theme-default h1 {
+  color: #ff00ff;
+  text-shadow: 2px 2px 0 #00ffff, 4px 4px 0 #ffff00;
+}
+
+.theme-default h2 {
+  color: #00ffff;
+  text-shadow: 1px 1px 0 #ff00ff, 2px 2px 0 #000;
+}
+
+.theme-default a {
+  color: #0000ff;
+}
+
+.theme-default a:visited {
+  color: #800080;
+}
+
+.theme-default a:hover {
+  color: #ff00ff;
+  background: #ffff00;
+}
+
+.theme-default button, .theme-default .btn {
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+  border: 3px solid #000;
+  color: #000;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.theme-default button:hover, .theme-default .btn:hover {
+  background: linear-gradient(135deg, #00ffff, #ffff00);
+}
+
+.theme-default .tag {
+  background: #ff00ff;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+.theme-default .tag:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+/* Animated elements */
+.theme-default .footer-motto {
+  animation: rainbow-pulse 2s linear infinite;
+}
+
+@keyframes rainbow-pulse {
+  0%, 100% { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+  16% { color: #ff7f00; text-shadow: 0 0 5px #ff7f00; }
+  33% { color: #ffff00; text-shadow: 0 0 5px #ffff00; }
+  50% { color: #00ff00; text-shadow: 0 0 5px #00ff00; }
+  66% { color: #0000ff; text-shadow: 0 0 5px #0000ff; }
+  83% { color: #9400d3; text-shadow: 0 0 5px #9400d3; }
+}
+
+/* Sparkle effect on hover for images */
+.theme-default img:hover {
+  filter: brightness(1.1) contrast(1.1);
+  animation: sparkle 0.5s ease;
+}
+
+@keyframes sparkle {
+  0%, 100% { filter: brightness(1.1); }
+  50% { filter: brightness(1.3) saturate(1.5); }
+}

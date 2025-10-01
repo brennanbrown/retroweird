@@ -1,0 +1,377 @@
+/* MySpace Theme - Early 2000s Social Networking Nostalgia */
+
+.theme-myspace {
+  --primary-color: #0066CC;
+  --secondary-color: #FFFFFF;
+  --accent-color: #FF6600;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --link-color: #0066CC;
+  --link-visited: #660099;
+}
+
+.theme-myspace body {
+  background-color: #0066CC;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.05) 10px, rgba(255,255,255,.05) 20px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.theme-myspace .content-wrapper {
+  background: #FFFFFF;
+  border: 3px solid #0066CC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-myspace .widget {
+  background: #FFFFFF;
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-myspace .widget-title {
+  background: linear-gradient(180deg, #0066CC 0%, #004C99 100%);
+  color: #FFFFFF;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 3px 3px 0 0;
+  padding: 0.75rem;
+}
+
+.theme-myspace .site-header {
+  background: linear-gradient(180deg, #0066CC 0%, #004C99 100%);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.theme-myspace .header-marquee {
+  background: #FF6600;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+}
+
+.theme-myspace .site-title-text {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.theme-myspace .site-description {
+  color: #FFFFFF;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.theme-myspace .site-footer {
+  background: linear-gradient(180deg, #004C99 0%, #0066CC 100%);
+  border: none;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+.theme-myspace .footer-column h3,
+.theme-myspace .footer-links a,
+.theme-myspace .footer-social a {
+  color: #FFFFFF;
+}
+
+.theme-myspace .footer-links a:hover,
+.theme-myspace .footer-social a:hover {
+  color: #FF6600;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-myspace .nav-link {
+  background: #FFFFFF;
+  border: 1px solid #0066CC;
+  color: #0066CC;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.theme-myspace .nav-link:hover {
+  background: #0066CC;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-myspace .nav-link.active {
+  background: #FF6600;
+  color: #FFFFFF;
+  border-color: #FF6600;
+}
+
+.theme-myspace h1 {
+  color: #0066CC;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: Georgia, 'Times New Roman', serif;
+  border-bottom: 3px solid #0066CC;
+  padding-bottom: 0.5rem;
+}
+
+.theme-myspace h2 {
+  color: #004C99;
+  font-family: Verdana, Arial, sans-serif;
+  border-bottom: 2px solid #0066CC;
+  padding-bottom: 0.25rem;
+}
+
+.theme-myspace h3 {
+  color: #0066CC;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.theme-myspace a {
+  color: #0066CC;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.theme-myspace a:visited {
+  color: #660099;
+}
+
+.theme-myspace a:hover {
+  color: #FF6600;
+  text-decoration: none;
+}
+
+.theme-myspace button, .theme-myspace .btn {
+  background: linear-gradient(180deg, #0066CC, #004C99);
+  border: 1px solid #003366;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.theme-myspace button:hover, .theme-myspace .btn:hover {
+  background: linear-gradient(180deg, #FF6600, #CC5200);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-myspace .tag {
+  background: #0066CC;
+  color: #FFFFFF;
+  border: 1px solid #004C99;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-myspace .tag:hover {
+  background: #FF6600;
+  border-color: #CC5200;
+}
+
+.theme-myspace p {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Profile-style about me section */
+.theme-myspace .widget-about-me {
+  background: linear-gradient(180deg, #F0F0F0 0%, #FFFFFF 100%);
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+}
+
+.theme-myspace .about-avatar {
+  border: 3px solid #0066CC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* MySpace-style comments section (guestbook) */
+.theme-myspace .guestbook-entry {
+  background: #F5F5F5;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-myspace .guestbook-entry:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-myspace .entry-header {
+  border-bottom: 1px solid #0066CC;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme-myspace .entry-name {
+  color: #0066CC;
+  font-weight: bold;
+}
+
+/* Top friends style for links */
+.theme-myspace .blogroll-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.theme-myspace .blogroll-item {
+  background: #F5F5F5;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.theme-myspace .blogroll-item:hover {
+  background: #0066CC;
+  border-color: #0066CC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-myspace .blogroll-item:hover a {
+  color: #FFFFFF;
+}
+
+/* Visitor counter with MySpace style */
+.theme-myspace .visitor-counter {
+  background: linear-gradient(180deg, #F0F0F0, #FFFFFF);
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+}
+
+.theme-myspace .visitor-counter p {
+  color: #0066CC;
+  font-weight: bold;
+}
+
+.theme-myspace .visitor-count {
+  color: #0066CC;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Music player widget */
+.theme-myspace .now-playing-display {
+  background: #000000;
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+}
+
+.theme-myspace .winamp-style {
+  background: linear-gradient(135deg, #0066CC, #004C99);
+}
+
+/* Forms */
+.theme-myspace input, 
+.theme-myspace textarea, 
+.theme-myspace select {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.theme-myspace input:focus, 
+.theme-myspace textarea:focus, 
+.theme-myspace select:focus {
+  outline: none;
+  border-color: #0066CC;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+/* Blockquotes - comment style */
+.theme-myspace blockquote {
+  background: #F5F5F5;
+  border-left: 4px solid #0066CC;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Code blocks */
+.theme-myspace code {
+  background: #F5F5F5;
+  border: 1px solid #CCCCCC;
+  color: #0066CC;
+  border-radius: 3px;
+}
+
+.theme-myspace pre {
+  background: #000000;
+  color: #00FF00;
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+}
+
+/* Tables */
+.theme-myspace table {
+  border: 2px solid #0066CC;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.theme-myspace th {
+  background: linear-gradient(180deg, #0066CC, #004C99);
+  color: #FFFFFF;
+  border: 1px solid #003366;
+}
+
+.theme-myspace td {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+
+.theme-myspace tr:nth-child(even) td {
+  background: #F5F5F5;
+}
+
+/* Smooth hover effects */
+.theme-myspace .widget:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Badge grid with MySpace styling */
+.theme-myspace .badge-grid {
+  background: #F5F5F5;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.theme-myspace .badge-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+}
+
+/* Post styling */
+.theme-myspace .blog-post {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.theme-myspace .post-meta {
+  color: #666666;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 0.5rem;
+}
+
+.theme-myspace .post-author {
+  background: #F5F5F5;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+/* Rounded corners on everything */
+.theme-myspace .content-wrapper,
+.theme-myspace .widget,
+.theme-myspace .site-header,
+.theme-myspace .site-footer {
+  border-radius: 5px;
+}

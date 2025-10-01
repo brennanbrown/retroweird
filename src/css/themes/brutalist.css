@@ -1,0 +1,387 @@
+/* Brutalist Chaos Theme - Maximum Visual Density */
+
+.theme-brutalist {
+  --primary-color: #FF0000;
+  --secondary-color: #00FF00;
+  --accent-color: #0000FF;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --link-color: #FF0000;
+  --link-visited: #800000;
+}
+
+.theme-brutalist body {
+  background-color: #000000;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,0,0,0.1) 2px, rgba(255,0,0,0.1) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,255,0,0.1) 2px, rgba(0,255,0,0.1) 4px),
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,255,0.05) 10px, rgba(0,0,255,0.05) 20px);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  color: #00FF00;
+}
+
+.theme-brutalist .content-wrapper {
+  background: rgba(0, 0, 0, 0.95);
+  border: 5px solid #FF0000;
+  box-shadow: 
+    10px 10px 0 rgba(255, 0, 0, 0.5),
+    20px 20px 0 rgba(0, 255, 0, 0.3),
+    30px 30px 0 rgba(0, 0, 255, 0.2);
+  color: #00FF00;
+  position: relative;
+  overflow: visible;
+}
+
+.theme-brutalist .content-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px dashed #0000FF;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-brutalist .widget {
+  background: rgba(0, 0, 0, 0.9);
+  border: 4px solid;
+  border-color: #FF0000 #00FF00 #0000FF #FFFF00;
+  box-shadow: 
+    5px 5px 0 rgba(255, 0, 0, 0.5),
+    10px 10px 0 rgba(0, 255, 0, 0.3);
+  color: #00FF00;
+  transform: rotate(-0.5deg);
+  position: relative;
+}
+
+.theme-brutalist .widget:nth-child(even) {
+  transform: rotate(0.5deg);
+  border-color: #0000FF #FFFF00 #FF0000 #00FF00;
+}
+
+.theme-brutalist .widget:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(-0.5deg) translateX(0); }
+  25% { transform: rotate(-0.5deg) translateX(-2px); }
+  75% { transform: rotate(-0.5deg) translateX(2px); }
+}
+
+.theme-brutalist .widget-title {
+  background: linear-gradient(90deg, #FF0000, #00FF00, #0000FF, #FFFF00);
+  background-size: 400% 100%;
+  animation: gradient-slide 2s linear infinite;
+  color: #000000;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0 #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  padding: 1rem;
+  border: 3px double #000000;
+}
+
+@keyframes gradient-slide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.theme-brutalist .site-header {
+  background: linear-gradient(45deg, #FF0000 25%, #00FF00 25%, #00FF00 50%, #0000FF 50%, #0000FF 75%, #FFFF00 75%);
+  background-size: 40px 40px;
+  border: 6px solid #000000;
+  box-shadow: 
+    0 0 0 2px #FF0000,
+    0 0 0 4px #00FF00,
+    0 0 0 6px #0000FF;
+  position: relative;
+}
+
+.theme-brutalist .header-marquee {
+  background: #FF0000;
+  color: #FFFF00;
+  font-weight: bold;
+  border: 3px solid #000000;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  animation: color-cycle 3s linear infinite;
+}
+
+@keyframes color-cycle {
+  0% { background: #FF0000; color: #FFFF00; }
+  25% { background: #00FF00; color: #FF0000; }
+  50% { background: #0000FF; color: #00FF00; }
+  75% { background: #FFFF00; color: #0000FF; }
+  100% { background: #FF0000; color: #FFFF00; }
+}
+
+.theme-brutalist .site-title-text {
+  color: #FFFF00;
+  text-shadow: 
+    3px 3px 0 #FF0000,
+    6px 6px 0 #00FF00,
+    9px 9px 0 #0000FF;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  animation: glitch-text 5s infinite;
+}
+
+@keyframes glitch-text {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
+.theme-brutalist .site-footer {
+  background: linear-gradient(135deg, #0000FF 25%, #FF0000 25%, #FF0000 50%, #00FF00 50%, #00FF00 75%, #FFFF00 75%);
+  background-size: 40px 40px;
+  border: 6px solid #000000;
+  color: #000000;
+  box-shadow: 
+    0 0 0 2px #00FF00,
+    0 0 0 4px #FF0000,
+    0 0 0 6px #0000FF;
+}
+
+.theme-brutalist .nav-link {
+  background: #FF0000;
+  border: 4px solid #000000;
+  color: #FFFF00;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 #00FF00;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  transform: skew(-5deg);
+  transition: all 0.1s;
+}
+
+.theme-brutalist .nav-link:hover {
+  background: #00FF00;
+  color: #FF0000;
+  transform: skew(5deg) scale(1.1);
+  box-shadow: 6px 6px 0 #0000FF;
+}
+
+.theme-brutalist .nav-link.active {
+  background: #0000FF;
+  color: #FFFF00;
+  transform: skew(0deg);
+  animation: pulse-scale 1s infinite;
+}
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.theme-brutalist h1 {
+  color: #FF0000;
+  text-shadow: 
+    3px 3px 0 #00FF00,
+    6px 6px 0 #0000FF,
+    9px 9px 0 #FFFF00;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  animation: title-glitch 3s infinite;
+}
+
+@keyframes title-glitch {
+  0%, 100% { 
+    text-shadow: 3px 3px 0 #00FF00, 6px 6px 0 #0000FF;
+  }
+  25% { 
+    text-shadow: -3px 3px 0 #00FF00, 6px -6px 0 #0000FF;
+  }
+  50% { 
+    text-shadow: 3px -3px 0 #00FF00, -6px 6px 0 #0000FF;
+  }
+  75% { 
+    text-shadow: -3px -3px 0 #00FF00, -6px -6px 0 #0000FF;
+  }
+}
+
+.theme-brutalist h2 {
+  color: #00FF00;
+  text-shadow: 2px 2px 0 #FF0000;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  border: 3px solid #0000FF;
+  padding: 0.5rem;
+  background: #000000;
+}
+
+.theme-brutalist h3 {
+  color: #0000FF;
+  text-shadow: 1px 1px 0 #FFFF00;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.theme-brutalist a {
+  color: #FF0000;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #00FF00;
+  text-decoration-thickness: 3px;
+}
+
+.theme-brutalist a:visited {
+  color: #800000;
+}
+
+.theme-brutalist a:hover {
+  color: #FFFF00;
+  background: #FF0000;
+  text-decoration: none;
+  padding: 2px 4px;
+}
+
+.theme-brutalist button, .theme-brutalist .btn {
+  background: linear-gradient(45deg, #FF0000, #00FF00);
+  border: 5px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #FFFFFF;
+  box-shadow: 5px 5px 0 #0000FF;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  transform: skew(-3deg);
+}
+
+.theme-brutalist button:hover, .theme-brutalist .btn:hover {
+  background: linear-gradient(45deg, #0000FF, #FFFF00);
+  transform: skew(3deg) scale(1.1);
+  box-shadow: 7px 7px 0 #FF0000;
+}
+
+.theme-brutalist .tag {
+  background: #0000FF;
+  color: #FFFF00;
+  border: 3px solid #FF0000;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 #00FF00;
+  transform: rotate(-2deg);
+}
+
+.theme-brutalist .tag:hover {
+  background: #00FF00;
+  color: #000000;
+  transform: rotate(2deg);
+}
+
+.theme-brutalist p {
+  color: #00FF00;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.theme-brutalist .visitor-counter {
+  background: #FF0000;
+  border: 5px solid #FFFF00;
+  box-shadow: 
+    0 0 20px #FF0000,
+    inset 0 0 20px #000000;
+}
+
+.theme-brutalist .visitor-count {
+  color: #FFFF00;
+  text-shadow: 
+    0 0 10px #FFFF00,
+    0 0 20px #FFFF00,
+    2px 2px 0 #FF0000;
+  animation: counter-flicker 0.5s infinite;
+}
+
+@keyframes counter-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.theme-brutalist blockquote {
+  background: rgba(255, 0, 0, 0.2);
+  border-left: 8px solid #FF0000;
+  border-right: 8px solid #0000FF;
+  color: #00FF00;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.theme-brutalist code {
+  background: #000000;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  font-weight: bold;
+}
+
+.theme-brutalist pre {
+  background: #000000;
+  color: #00FF00;
+  border: 4px solid #FF0000;
+  box-shadow: 4px 4px 0 #0000FF;
+}
+
+/* Overlapping elements */
+.theme-brutalist .page-container {
+  position: relative;
+}
+
+.theme-brutalist .sidebar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Maximum chaos */
+.theme-brutalist * {
+  text-transform: uppercase;
+}
+
+.theme-brutalist input, 
+.theme-brutalist textarea, 
+.theme-brutalist select {
+  background: #000000;
+  border: 3px solid #00FF00;
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.theme-brutalist input:focus, 
+.theme-brutalist textarea:focus, 
+.theme-brutalist select:focus {
+  outline: none;
+  border-color: #FF0000;
+  box-shadow: 0 0 10px #FF0000;
+}
+
+/* Popup-style modals */
+.theme-brutalist .modal {
+  border: 6px solid #FF0000;
+  box-shadow: 
+    10px 10px 0 #00FF00,
+    20px 20px 0 #0000FF;
+}
+
+/* Everything vibrates */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-brutalist .content-wrapper {
+    animation: vibrate 0.1s infinite;
+  }
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+}

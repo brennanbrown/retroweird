@@ -1,0 +1,332 @@
+/* GeoCities Theme - Classic 1990s Web Aesthetic */
+
+.theme-geocities {
+  --primary-color: #FFFF00;
+  --secondary-color: #00FF00;
+  --accent-color: #FF0000;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --link-color: #0000FF;
+  --link-visited: #800080;
+}
+
+.theme-geocities body {
+  background-color: #C0C0C0;
+  background-image: url('/images/backgrounds/construction.gif');
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+}
+
+.theme-geocities .content-wrapper {
+  background: #FFFFFF;
+  border: 5px solid #000000;
+  border-style: groove;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.theme-geocities .widget {
+  background: #FFFFCC;
+  border: 3px solid #000000;
+  border-style: ridge;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.theme-geocities .widget:nth-child(even) {
+  background: #CCFFCC;
+}
+
+.theme-geocities .widget:nth-child(3n) {
+  background: #FFCCFF;
+}
+
+.theme-geocities .widget-title {
+  background: linear-gradient(90deg, 
+    #FF0000 0%, 
+    #FF7F00 14%, 
+    #FFFF00 28%, 
+    #00FF00 42%, 
+    #0000FF 57%, 
+    #4B0082 71%, 
+    #9400D3 85%, 
+    #FF0000 100%);
+  background-size: 200% 100%;
+  animation: rainbow-scroll 3s linear infinite;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #000000;
+  font-family: 'Press Start 2P', monospace;
+}
+
+@keyframes rainbow-scroll {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.theme-geocities .site-header {
+  background: linear-gradient(180deg, #FFFF00 0%, #FF0000 100%);
+  border: 5px solid #000000;
+  border-style: outset;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.theme-geocities .header-marquee {
+  background: #FF0000;
+  color: #FFFF00;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 3px solid #000000;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.theme-geocities .site-title-text {
+  color: #FF0000;
+  text-shadow: 
+    3px 3px 0 #FFFF00,
+    6px 6px 0 #00FF00,
+    9px 9px 0 #0000FF;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.theme-geocities .site-description {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: #FFFF00;
+  padding: 0.5rem;
+  border: 2px solid #000000;
+}
+
+.theme-geocities .site-footer {
+  background: linear-gradient(180deg, #0000FF 0%, #00FF00 100%);
+  border: 5px solid #000000;
+  border-style: outset;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.theme-geocities .nav-link {
+  background: #FFFF00;
+  border: 3px solid #000000;
+  border-style: outset;
+  color: #FF0000;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: 'Comic Sans MS', cursive;
+  text-transform: none;
+}
+
+.theme-geocities .nav-link:hover {
+  background: #FF0000;
+  color: #FFFF00;
+  border-style: inset;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.theme-geocities .nav-link.active {
+  background: #00FF00;
+  color: #0000FF;
+  border-style: inset;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.theme-geocities h1 {
+  color: #FF0000;
+  text-shadow: 
+    2px 2px 0 #FFFF00,
+    4px 4px 0 #00FF00,
+    6px 6px 0 #0000FF;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+}
+
+.theme-geocities h2 {
+  color: #0000FF;
+  text-shadow: 2px 2px 0 #FFFF00;
+  font-family: 'Press Start 2P', monospace;
+  background: #FFFF00;
+  padding: 0.5rem;
+  border: 3px solid #000000;
+  border-style: groove;
+}
+
+.theme-geocities h3 {
+  color: #FF0000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.theme-geocities a {
+  color: #0000FF;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.theme-geocities a:visited {
+  color: #800080;
+}
+
+.theme-geocities a:hover {
+  color: #FF0000;
+  background: #FFFF00;
+  text-decoration: none;
+}
+
+.theme-geocities button, .theme-geocities .btn {
+  background: linear-gradient(180deg, #FFFF00, #FF0000);
+  border: 4px solid #000000;
+  border-style: outset;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #FFFFFF;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.theme-geocities button:hover, .theme-geocities .btn:hover {
+  background: linear-gradient(180deg, #00FF00, #0000FF);
+  color: #FFFFFF;
+  border-style: inset;
+}
+
+.theme-geocities .tag {
+  background: #FF0000;
+  color: #FFFF00;
+  border: 3px solid #000000;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.theme-geocities .tag:hover {
+  background: #00FF00;
+  color: #FF0000;
+}
+
+.theme-geocities .visitor-counter {
+  background: #000000;
+  border: 4px solid #FFFF00;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+.theme-geocities .visitor-count {
+  color: #00FF00;
+  text-shadow: 
+    0 0 10px #00FF00,
+    0 0 20px #00FF00;
+  animation: counter-glow 2s ease-in-out infinite;
+}
+
+@keyframes counter-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #00FF00;
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #00FF00,
+      0 0 30px #00FF00;
+  }
+}
+
+.theme-geocities .post-content {
+  background: #FFFFFF;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.theme-geocities blockquote {
+  background: #FFFFCC;
+  border-left: 5px solid #FF0000;
+  border-right: 5px solid #0000FF;
+  font-style: italic;
+}
+
+.theme-geocities code {
+  background: #FFFF00;
+  border: 2px solid #000000;
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.theme-geocities pre {
+  background: #000000;
+  color: #00FF00;
+  border: 3px solid #00FF00;
+}
+
+/* Under construction animation */
+.theme-geocities .widget-construction img {
+  animation: construction-bounce 1s infinite;
+}
+
+@keyframes construction-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Spinning elements */
+.theme-geocities .footer-badges img {
+  transition: transform 0.5s;
+}
+
+.theme-geocities .footer-badges img:hover {
+  transform: rotate(360deg);
+}
+
+/* Yellow highlight on everything */
+.theme-geocities ::selection {
+  background: #FFFF00;
+  color: #FF0000;
+}
+
+/* Table styling */
+.theme-geocities table {
+  border: 4px solid #000000;
+  border-style: ridge;
+}
+
+.theme-geocities th {
+  background: linear-gradient(90deg, #FF0000, #FFFF00, #00FF00);
+  color: #000000;
+  font-weight: bold;
+  border: 3px solid #000000;
+}
+
+.theme-geocities td {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+.theme-geocities tr:nth-child(even) td {
+  background: #FFFFCC;
+}
+
+.theme-geocities input, 
+.theme-geocities textarea, 
+.theme-geocities select {
+  background: #FFFFCC;
+  border: 3px solid #000000;
+  border-style: inset;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.theme-geocities input:focus, 
+.theme-geocities textarea:focus, 
+.theme-geocities select:focus {
+  outline: 3px solid #FF0000;
+  background: #FFFF00;
+}
+
+/* Extreme beveled borders everywhere */
+.theme-geocities .content-wrapper,
+.theme-geocities .widget,
+.theme-geocities .site-header,
+.theme-geocities .site-footer {
+  border-style: ridge !important;
+}

@@ -1,0 +1,485 @@
+/* Academia Webpage Theme - 1990s University Homepage Style */
+
+.theme-academia {
+  --primary-color: #000080;
+  --secondary-color: #696969;
+  --accent-color: #8B0000;
+  --text-color: #000000;
+  --bg-color: #C0C0C0;
+  --link-color: #0000EE;
+  --link-visited: #551A8B;
+}
+
+.theme-academia body {
+  background-color: #C0C0C0;
+  background-image: none;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.theme-academia .content-wrapper {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.theme-academia .widget {
+  background: #F5F5F5;
+  border: 1px solid #696969;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.theme-academia .widget-title {
+  background: #000080;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 0.5rem;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.theme-academia .site-header {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-bottom: 4px double #000000;
+  box-shadow: none;
+  padding: 1rem;
+}
+
+.theme-academia .header-marquee {
+  background: #FFFFE0;
+  color: #000000;
+  font-weight: normal;
+  border: 1px solid #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  font-size: 0.875rem;
+}
+
+.theme-academia .site-branding {
+  border-bottom: 2px solid #000080;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.theme-academia .site-title-text {
+  color: #000080;
+  text-shadow: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.theme-academia .site-description {
+  color: #696969;
+  font-style: italic;
+  font-size: 1rem;
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+.theme-academia .site-footer {
+  background: #F5F5F5;
+  border: 1px solid #000000;
+  border-top: 4px double #000000;
+  box-shadow: none;
+  color: #000000;
+  padding: 1.5rem;
+}
+
+.theme-academia .footer-bottom {
+  border-top: 1px solid #696969;
+  font-size: 0.75rem;
+  color: #696969;
+}
+
+.theme-academia .nav-link {
+  background: #E0E0E0;
+  border: 1px solid #000000;
+  color: #000080;
+  box-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  font-size: 0.875rem;
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+}
+
+.theme-academia .nav-link:hover {
+  background: #FFFFCC;
+  color: #000000;
+  border-color: #000080;
+  transform: none;
+  text-decoration: underline;
+}
+
+.theme-academia .nav-link.active {
+  background: #000080;
+  color: #FFFFFF;
+  border-color: #000080;
+  font-weight: bold;
+}
+
+.theme-academia h1 {
+  color: #000080;
+  text-shadow: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: 2px solid #000080;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.theme-academia h2 {
+  color: #8B0000;
+  text-shadow: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-transform: none;
+  border-bottom: 1px solid #8B0000;
+  padding-bottom: 0.25rem;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.theme-academia h3 {
+  color: #000000;
+  text-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.theme-academia a {
+  color: #0000EE;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.theme-academia a:visited {
+  color: #551A8B;
+}
+
+.theme-academia a:hover {
+  color: #FF0000;
+  background: #FFFFCC;
+  text-decoration: underline;
+}
+
+.theme-academia button, .theme-academia .btn {
+  background: #E0E0E0;
+  border: 2px outset #808080;
+  color: #000000;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.theme-academia button:hover, .theme-academia .btn:hover {
+  background: #D0D0D0;
+  border-style: outset;
+  transform: none;
+}
+
+.theme-academia button:active, .theme-academia .btn:active {
+  border-style: inset;
+}
+
+.theme-academia .tag {
+  background: #E0E0E0;
+  color: #000080;
+  border: 1px solid #696969;
+  font-weight: normal;
+  box-shadow: none;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.theme-academia .tag:hover {
+  background: #FFFFCC;
+  border-color: #000080;
+}
+
+.theme-academia p {
+  color: #000000;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+/* Hit counter - classic style */
+.theme-academia .visitor-counter {
+  background: #000000;
+  border: 2px inset #808080;
+  box-shadow: none;
+  padding: 0.5rem;
+}
+
+.theme-academia .visitor-counter p {
+  color: #00FF00;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+}
+
+.theme-academia .visitor-count {
+  color: #00FF00;
+  text-shadow: 0 0 2px #00FF00;
+  font-family: 'Courier New', monospace;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+/* Last updated date */
+.theme-academia .last-updated {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #696969;
+  font-style: italic;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+}
+
+.theme-academia blockquote {
+  background: #F5F5F5;
+  border-left: 3px solid #000080;
+  color: #000000;
+  font-style: italic;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.theme-academia code {
+  background: #F0F0F0;
+  border: 1px solid #C0C0C0;
+  color: #000000;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+.theme-academia pre {
+  background: #F5F5F5;
+  color: #000000;
+  border: 1px solid #696969;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.theme-academia pre code {
+  background: none;
+  border: none;
+}
+
+/* Simple table styling */
+.theme-academia table {
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+}
+
+.theme-academia th {
+  background: #E0E0E0;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 1px solid #696969;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.theme-academia td {
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  padding: 0.5rem;
+}
+
+.theme-academia tr:nth-child(even) td {
+  background: #F5F5F5;
+}
+
+/* Horizontal rules */
+.theme-academia hr {
+  border: none;
+  height: 1px;
+  background: #696969;
+  margin: 1.5rem 0;
+}
+
+/* Forms */
+.theme-academia input, 
+.theme-academia textarea, 
+.theme-academia select {
+  background: #FFFFFF;
+  border: 2px inset #808080;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+.theme-academia input:focus, 
+.theme-academia textarea:focus, 
+.theme-academia select:focus {
+  outline: 1px dotted #000080;
+  background: #FFFFEE;
+}
+
+/* Lists */
+.theme-academia ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.theme-academia ul li::before {
+  content: none;
+}
+
+.theme-academia ol {
+  list-style: decimal;
+  padding-left: 2rem;
+}
+
+/* About Me widget - academic style */
+.theme-academia .about-me-card {
+  background: #FFFFFF;
+  border: 1px solid #696969;
+  padding: 1rem;
+}
+
+.theme-academia .about-avatar {
+  border: 1px solid #000000;
+  border-radius: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+.theme-academia .footer-column h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #000080;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.theme-academia .footer-links a,
+.theme-academia .footer-social a {
+  color: #0000EE;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+.theme-academia .copyright {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #696969;
+}
+
+/* Guestbook entries - academic style */
+.theme-academia .guestbook-entry {
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.theme-academia .guestbook-entry:nth-child(odd) {
+  background: #F5F5F5;
+}
+
+.theme-academia .guestbook-entry:nth-child(even) {
+  background: #FFFFFF;
+}
+
+.theme-academia .entry-name {
+  color: #000080;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Badge grid - minimal style */
+.theme-academia .badge-grid {
+  background: #F5F5F5;
+  padding: 1rem;
+  border: 1px solid #C0C0C0;
+}
+
+/* Post styling */
+.theme-academia .post-card {
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-academia .post-date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #696969;
+  font-style: italic;
+}
+
+.theme-academia .post-meta {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #696969;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* "Last Modified" date in footer */
+.theme-academia .site-footer::after {
+  content: "Last modified: " attr(data-modified);
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #696969;
+  font-style: italic;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* No animations */
+.theme-academia * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Simple, academic aesthetic */
+.theme-academia .divider img {
+  filter: grayscale(50%);
+  opacity: 0.5;
+}
+
+/* Typography emphasis */
+.theme-academia strong {
+  font-weight: bold;
+}
+
+.theme-academia em {
+  font-style: italic;
+}
+
+/* Minimal, professional look */
+.theme-academia {
+  font-size: 16px;
+  line-height: 1.6;
+}
