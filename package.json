@@ -1,0 +1,33 @@
+{
+  "name": "retroweird-blog-theme",
+  "version": "1.0.0",
+  "description": "A maximalist Web 1.0 revival blog theme for Eleventy - inspired by GeoCities, MySpace, and personal homepages of the 1990s-2000s",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "blog",
+    "theme",
+    "retro",
+    "web1.0",
+    "geocities",
+    "myspace",
+    "indieweb",
+    "nostalgic"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "markdown-it": "^13.0.2",
+    "markdown-it-attrs": "^4.1.6"
+  },
+  "devDependencies": {}
+}
