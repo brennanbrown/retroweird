@@ -1,0 +1,28 @@
+{
+  "updates": [
+    {
+      "date": "2025-10-01",
+      "title": "Site Launch!",
+      "content": "Welcome to my new homepage! Still adding more cool stuff. Check back soon! 🎉",
+      "icon": "🚀"
+    },
+    {
+      "date": "2025-09-28",
+      "title": "Added Guestbook",
+      "content": "Sign my guestbook and let me know what you think!",
+      "icon": "📝"
+    },
+    {
+      "date": "2025-09-25",
+      "title": "New Badge Wall",
+      "content": "Check out all the cool badges I've collected!",
+      "icon": "🏆"
+    },
+    {
+      "date": "2025-09-20",
+      "title": "Under Construction",
+      "content": "Working on making this site even more radical!",
+      "icon": "🚧"
+    }
+  ]
+}

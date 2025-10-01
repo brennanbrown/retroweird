@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "name": "Jenny",
+      "website": "https://example.com/jenny",
+      "location": "California, USA",
+      "date": "2025-09-15",
+      "message": "Love your site! The retro vibes are immaculate! 🌟",
+      "approved": true
+    },
+    {
+      "id": 2,
+      "name": "TechWizard99",
+      "website": "https://example.com/techwiz",
+      "location": "Tokyo, Japan",
+      "date": "2025-09-20",
+      "message": "This takes me back to the golden age of the internet. Keep it up!",
+      "approved": true
+    },
+    {
+      "id": 3,
+      "name": "RetroFan",
+      "website": "",
+      "location": "London, UK",
+      "date": "2025-09-25",
+      "message": "Your badge collection is AMAZING! Where did you find all of these?! 💫",
+      "approved": true
+    }
+  ],
+  "config": {
+    "enabled": true,
+    "requireApproval": true,
+    "showWebsite": true,
+    "showLocation": true,
+    "maxMessageLength": 500,
+    "formEndpoint": "https://formspree.io/f/YOUR_FORM_ID"
+  }
+}

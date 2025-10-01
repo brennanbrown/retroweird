@@ -1,0 +1,105 @@
+{
+  "categories": [
+    {
+      "name": "Browser Compatibility",
+      "badges": [
+        {
+          "title": "Best Viewed in Netscape",
+          "image": "/images/badges/netscape.gif",
+          "url": "",
+          "alt": "Best Viewed in Netscape Navigator"
+        },
+        {
+          "title": "Internet Explorer",
+          "image": "/images/badges/ie.gif",
+          "url": "",
+          "alt": "Internet Explorer Compatible"
+        },
+        {
+          "title": "Any Browser",
+          "image": "/images/badges/anybrowser.gif",
+          "url": "",
+          "alt": "Viewable With Any Browser"
+        }
+      ]
+    },
+    {
+      "name": "Web Standards",
+      "badges": [
+        {
+          "title": "Valid HTML",
+          "image": "/images/badges/valid-html.gif",
+          "url": "https://validator.w3.org/",
+          "alt": "Valid HTML"
+        },
+        {
+          "title": "Valid CSS",
+          "image": "/images/badges/valid-css.gif",
+          "url": "https://jigsaw.w3.org/css-validator/",
+          "alt": "Valid CSS"
+        },
+        {
+          "title": "RSS Feed",
+          "image": "/images/badges/rss.gif",
+          "url": "/feed.xml",
+          "alt": "RSS Feed Available"
+        }
+      ]
+    },
+    {
+      "name": "IndieWeb",
+      "badges": [
+        {
+          "title": "IndieWeb",
+          "image": "/images/badges/indieweb.gif",
+          "url": "https://indieweb.org/",
+          "alt": "IndieWeb"
+        },
+        {
+          "title": "Webmentions",
+          "image": "/images/badges/webmention.gif",
+          "url": "https://webmention.io/",
+          "alt": "Webmentions Enabled"
+        }
+      ]
+    },
+    {
+      "name": "Creative Commons",
+      "badges": [
+        {
+          "title": "Creative Commons",
+          "image": "/images/badges/cc.gif",
+          "url": "https://creativecommons.org/",
+          "alt": "Creative Commons Licensed"
+        }
+      ]
+    },
+    {
+      "name": "Just for Fun",
+      "badges": [
+        {
+          "title": "Made with Notepad",
+          "image": "/images/badges/notepad.gif",
+          "url": "",
+          "alt": "Made with Notepad"
+        },
+        {
+          "title": "Powered by Coffee",
+          "image": "/images/badges/coffee.gif",
+          "url": "",
+          "alt": "Powered by Coffee"
+        },
+        {
+          "title": "No Flash",
+          "image": "/images/badges/noflash.gif",
+          "url": "",
+          "alt": "Flash Free"
+        }
+      ]
+    }
+  ],
+  "myBadge": {
+    "image": "/images/badges/my-site.gif",
+    "code": "<a href=\"https://yoursite.com\"><img src=\"https://yoursite.com/images/badges/my-site.gif\" alt=\"Your Site Name\" width=\"88\" height=\"31\"></a>"
+  }
+}

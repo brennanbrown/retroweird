@@ -1,0 +1,54 @@
+{
+  "title": "Retroweird",
+  "description": "A maximalist retro blog theme for Eleventy - Make the web weird again!",
+  "url": "https://retroweird.netlify.app",
+  "author": {
+    "name": "Brennan Kenneth Brown",
+    "email": "mail@brennanbrown.ca",
+    "url": "https://brennanbrown.ca",
+    "bio": "Web designer, cat enthusiast, 90s kid",
+    "avatar": "/images/avatar.svg",
+    "location": "The Internet",
+    "mood": "nostalgic",
+    "icqNumber": "123-456-789"
+  },
+  "theme": "default",
+  "modules": {
+    "guestbook": true,
+    "blogroll": true,
+    "webring": true,
+    "badgeWall": true,
+    "visitorCounter": true,
+    "nowPlaying": true,
+    "adSpace": true,
+    "updates": true,
+    "aboutMe": true,
+    "musicPlayer": false,
+    "cursorEffects": true
+  },
+  "layout": {
+    "sidebar": "left",
+    "showMarquee": true,
+    "backgroundColor": "#FF00FF",
+    "backgroundImage": "stars.gif",
+    "fontFamily": "Comic Sans MS, cursive"
+  },
+  "social": {
+    "github": "brennanbrown",
+    "mastodon": "https://mastodon.social/@brennan",
+    "email": "mail@brennanbrown.ca"
+  },
+  "features": {
+    "rss": true,
+    "webmentions": false,
+    "comments": true,
+    "search": false
+  },
+  "visitorCounter": {
+    "startNumber": 1000,
+    "enabled": true,
+    "style": "led"
+  },
+  "marqueeText": "✨ Welcome to my homepage! ✨ Under construction! ✨ Sign my guestbook! ✨",
+  "buildTime": "2025-10-01"
+}

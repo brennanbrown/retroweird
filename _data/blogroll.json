@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "name": "Cool Personal Sites",
+      "links": [
+        {
+          "title": "Jane's Homepage",
+          "url": "https://example.com/jane",
+          "description": "My friend's awesome retro page",
+          "status": "active"
+        },
+        {
+          "title": "Bob's Web Corner",
+          "url": "https://example.com/bob",
+          "description": "Cool coding tutorials and cat pics",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "name": "IndieWeb Friends",
+      "links": [
+        {
+          "title": "IndieWeb.org",
+          "url": "https://indieweb.org",
+          "description": "The IndieWeb community",
+          "status": "active"
+        },
+        {
+          "title": "Neocities",
+          "url": "https://neocities.org",
+          "description": "Free static web hosting",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "name": "Web Design Resources",
+      "links": [
+        {
+          "title": "GifCities",
+          "url": "https://gifcities.org",
+          "description": "Archive of GeoCities GIFs",
+          "status": "active"
+        },
+        {
+          "title": "88x31 Buttons",
+          "url": "https://cyber.dabamos.de/88x31/",
+          "description": "Collection of classic web badges",
+          "status": "active"
+        },
+        {
+          "title": "sadgrl.online",
+          "url": "https://sadgrl.online",
+          "description": "Web 1.0 resources and tutorials",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "name": "Inspiration",
+      "links": [
+        {
+          "title": "One Terabyte of Kilobyte Age",
+          "url": "https://oneterabyteofkilobyteage.tumblr.com",
+          "description": "GeoCities screenshots archive",
+          "status": "active"
+        },
+        {
+          "title": "Yesterweb",
+          "url": "https://yesterweb.org",
+          "description": "Reclaiming the internet",
+          "status": "active"
+        }
+      ]
+    }
+  ]
+}

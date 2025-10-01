@@ -1,0 +1,39 @@
+{
+  "webrings": [
+    {
+      "name": "Retro Web Ring",
+      "id": "retroweb",
+      "previousUrl": "https://example.com/previous",
+      "nextUrl": "https://example.com/next",
+      "randomUrl": "https://example.com/random",
+      "homeUrl": "https://example.com/webring",
+      "enabled": true
+    },
+    {
+      "name": "IndieWeb Ring",
+      "id": "indieweb",
+      "previousUrl": "https://example.com/indieweb/previous",
+      "nextUrl": "https://example.com/indieweb/next",
+      "randomUrl": "https://example.com/indieweb/random",
+      "homeUrl": "https://example.com/indieweb",
+      "enabled": true
+    }
+  ],
+  "members": [
+    {
+      "name": "Cool Site 1",
+      "url": "https://example1.com",
+      "description": "An awesome retro site"
+    },
+    {
+      "name": "Cool Site 2",
+      "url": "https://example2.com",
+      "description": "Another rad homepage"
+    },
+    {
+      "name": "Cool Site 3",
+      "url": "https://example3.com",
+      "description": "Yet another groovy page"
+    }
+  ]
+}
