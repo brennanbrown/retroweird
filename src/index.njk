@@ -1,0 +1,373 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<div class="homepage">
+  
+  {# Welcome section #}
+  <section class="welcome-section">
+    <h1>🌈 Welcome to {{ site.title }}! 🌈</h1>
+    
+    <div class="welcome-banner">
+      <img src="/images/welcome-banner.gif" alt="Welcome!" onerror="this.style.display='none'">
+    </div>
+    
+    <p class="welcome-text">
+      Hey there, internet traveler! You've stumbled upon my little corner of the web. 
+      This site is built with love, nostalgia, and a healthy dose of 90s aesthetic. 
+      Make yourself at home, explore around, and don't forget to sign my guestbook! ✨
+    </p>
+  </section>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  {# Latest blog posts #}
+  <section class="latest-posts">
+    <h2>📝 Latest Blog Posts</h2>
+    
+    {% set postslist = collections.posts | limit(3) %}
+    {% if postslist.length %}
+      <div class="posts-grid">
+        {% for post in postslist %}
+        <article class="post-card">
+          <h3>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          </h3>
+          <p class="post-date">{{ post.date | readableDate }}</p>
+          {% if post.data.description %}
+          <p class="post-excerpt">{{ post.data.description }}</p>
+          {% endif %}
+          <a href="{{ post.url }}" class="read-more">Read more →</a>
+        </article>
+        {% endfor %}
+      </div>
+      
+      <p class="view-all">
+        <a href="/blog/" class="btn">View All Posts</a>
+      </p>
+    {% else %}
+      <p>No posts yet! Check back soon for updates. 🚧</p>
+    {% endif %}
+  </section>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  {# Featured sections #}
+  <section class="featured-sections">
+    <h2>🔥 What's Hot!</h2>
+    
+    <div class="feature-grid">
+      
+      {% if site.modules.guestbook %}
+      <div class="feature-card">
+        <h3>📖 Guestbook</h3>
+        <p>Leave me a message and let me know you were here!</p>
+        <a href="/guestbook/" class="btn">Sign Guestbook</a>
+      </div>
+      {% endif %}
+      
+      {% if site.modules.blogroll %}
+      <div class="feature-card">
+        <h3>🔗 Cool Links</h3>
+        <p>Check out my favorite sites around the web!</p>
+        <a href="/links/" class="btn">Browse Links</a>
+      </div>
+      {% endif %}
+      
+      {% if site.modules.badgeWall %}
+      <div class="feature-card">
+        <h3>🏆 Badge Collection</h3>
+        <p>View my collection of 88x31 badges!</p>
+        <a href="/badges/" class="btn">See Badges</a>
+      </div>
+      {% endif %}
+      
+      <div class="feature-card">
+        <h3>👤 About Me</h3>
+        <p>Learn more about who I am and what I do!</p>
+        <a href="/about/" class="btn">Read More</a>
+      </div>
+      
+      <div class="feature-card">
+        <h3>🎨 Badge Maker</h3>
+        <p>Create your own custom 88x31 web badge!</p>
+        <a href="/badge-generator/" class="btn">Make Badge</a>
+      </div>
+      
+      <div class="feature-card">
+        <h3>📡 RSS Feed</h3>
+        <p>Subscribe to updates via RSS!</p>
+        <a href="/feed.xml" class="btn">Subscribe</a>
+      </div>
+      
+    </div>
+  </section>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  {# Why Go Retro section #}
+  <section class="why-retro">
+    <h2>🎨 Why Go Retro?</h2>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <h3>✨ Express Yourself</h3>
+        <p>Break free from boring templates! Make a site that's uniquely YOU with colors, animations, and personality.</p>
+      </div>
+      <div class="reason-card">
+        <h3>🎪 Have Fun</h3>
+        <p>Remember when the web was playful? Bring back the joy with GIFs, badges, and maximalist design!</p>
+      </div>
+      <div class="reason-card">
+        <h3>🌐 Own Your Space</h3>
+        <p>No algorithms, no ads, no corporate overlords. Just your content, your way, on your domain.</p>
+      </div>
+      <div class="reason-card">
+        <h3>🔗 Build Community</h3>
+        <p>Join webrings, exchange links, and connect with real humans who share your interests!</p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  {# Themes showcase #}
+  <section class="themes-showcase">
+    <h2>🎨 6 Awesome Themes Included!</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">
+      Switch themes instantly with the dropdown in the header! Each theme captures a different era of web design.
+    </p>
+    <div class="themes-list">
+      <div class="theme-item">
+        <h3>🌈 GeoCities Classic</h3>
+        <p>Rainbow gradients, hot pink, and cyan. Pure 1990s GeoCities nostalgia!</p>
+      </div>
+      <div class="theme-item">
+        <h3>💎 Vaporwave Dreams</h3>
+        <p>A E S T H E T I C pink and cyan with neon glows and glitch effects.</p>
+      </div>
+      <div class="theme-item">
+        <h3>🎪 90s Maximum</h3>
+        <p>Comic Sans, construction signs, and rainbow everything. Maximum nostalgia!</p>
+      </div>
+      <div class="theme-item">
+        <h3>💙 MySpace Nostalgia</h3>
+        <p>Early 2000s social media style with blue gradients and rounded corners.</p>
+      </div>
+      <div class="theme-item">
+        <h3>⚡ Brutalist Chaos</h3>
+        <p>Neon colors, maximum visual density, glitch effects, and controlled chaos!</p>
+      </div>
+      <div class="theme-item">
+        <h3>🎓 Academia</h3>
+        <p>1990s university homepage style. Professional, minimal, and timeless.</p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  {# Call to action #}
+  <section class="cta-section">
+    <h2>🌟 Join the Retro Web Revival! 🌟</h2>
+    <p>
+      Tired of boring, cookie-cutter websites? Want to express your creativity and individuality online? 
+      You're in the right place! This site is built with the Retroweird theme for Eleventy.
+    </p>
+    <p><strong>Features include:</strong></p>
+    <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+      <li>6 pre-built retro themes</li>
+      <li>Interactive badge generator</li>
+      <li>Customizable cursor effects</li>
+      <li>Guestbook, webring, and blogroll</li>
+      <li>RSS feed support</li>
+      <li>IndieWeb ready</li>
+      <li>Mobile responsive</li>
+      <li>Fully accessible</li>
+    </ul>
+    <p>
+      <a href="https://github.com/yourusername/retroweird" class="btn" target="_blank" rel="noopener noreferrer">
+        Get the Theme
+      </a>
+    </p>
+  </section>
+  
+</div>
+
+<style>
+.homepage {
+  font-family: var(--font-body);
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome-banner {
+  margin: 1rem 0;
+}
+
+.welcome-banner img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.welcome-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  border-style: ridge;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.post-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #ff00ff;
+  color: #fff;
+  border: 2px solid #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  border-style: groove;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  text-align: center;
+  background: rgba(255, 255, 0, 0.3);
+  border: 4px solid #000;
+  border-style: double;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.why-retro,
+.themes-showcase {
+  margin: 2rem 0;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.reason-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  border-style: ridge;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.reason-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.themes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.theme-item {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  border-style: groove;
+  padding: 1.5rem;
+}
+
+.theme-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .posts-grid,
+  .feature-grid,
+  .reasons-grid,
+  .themes-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

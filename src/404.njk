@@ -1,0 +1,128 @@
+---
+layout: layouts/page.njk
+title: 404 - Page Not Found
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="error-404">
+  
+  <div style="text-align: center; margin: 2rem 0;">
+    <img src="/images/404-construction.gif" alt="Under construction" style="max-width: 300px;" onerror="this.style.display='none'">
+  </div>
+  
+  <h1 style="text-align: center; font-size: 3rem;">
+    4️⃣0️⃣4️⃣
+  </h1>
+  
+  <h2 style="text-align: center;">
+    Oops! Page Not Found
+  </h2>
+  
+  <div class="error-message">
+    <p style="text-align: center; font-size: 1.5rem;">
+      Looks like you've wandered into a dead link! This page doesn't exist (or maybe it's still under construction 🚧).
+    </p>
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  <div class="error-options" style="text-align: center;">
+    <h3>Where would you like to go?</h3>
+    
+    <div class="error-nav" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+      <a href="/" class="btn">🏠 Home</a>
+      <a href="/blog/" class="btn">📝 Blog</a>
+      <a href="/about/" class="btn">👤 About</a>
+      <a href="/links/" class="btn">🔗 Links</a>
+      <a href="/guestbook/" class="btn">📖 Guestbook</a>
+    </div>
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  <div class="error-fun" style="background: rgba(255, 255, 0, 0.2); padding: 2rem; border: 3px dashed #000; text-align: center;">
+    <h3>🎲 Feeling Lucky?</h3>
+    <p>Try a random page from my blogroll!</p>
+    <button onclick="goToRandomLink()" class="btn">Random Link</button>
+  </div>
+  
+  <div style="text-align: center; margin: 2rem 0;">
+    <img src="/images/crying-emoji.gif" alt="Sad" style="max-width: 100px;" onerror="this.style.display='none'">
+  </div>
+  
+</div>
+
+<script>
+function goToRandomLink() {
+  // Random links from blogroll
+  const links = [
+    'https://indieweb.org',
+    'https://neocities.org',
+    'https://gifcities.org',
+    'https://cyber.dabamos.de/88x31/',
+    'https://yesterweb.org'
+  ];
+  const randomLink = links[Math.floor(Math.random() * links.length)];
+  window.open(randomLink, '_blank');
+}
+
+// Easter egg: typing "home" takes you home
+let typed = '';
+document.addEventListener('keypress', function(e) {
+  typed += e.key.toLowerCase();
+  if (typed.includes('home')) {
+    window.location.href = '/';
+  }
+  if (typed.length > 10) {
+    typed = typed.slice(-10);
+  }
+});
+</script>
+
+<style>
+.error-404 {
+  font-family: var(--font-body);
+}
+
+.error-404 h1 {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.error-message {
+  background: rgba(255, 0, 255, 0.1);
+  border: 3px solid #ff00ff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+  color: #000;
+  border: 3px solid #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #00ffff, #ffff00);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+</style>
