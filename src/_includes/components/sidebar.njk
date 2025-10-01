@@ -1,0 +1,173 @@
+{# Sidebar with modular widgets #}
+
+{# About Me Widget #}
+{% if site.modules.aboutMe %}
+<div class="widget widget-about-me">
+  <h2 class="widget-title">About Me</h2>
+  <div class="widget-content">
+    <div class="about-me-card h-card">
+      <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}" class="u-photo about-avatar">
+      <h3 class="p-name">{{ site.author.name }}</h3>
+      <p class="p-note">{{ site.author.bio }}</p>
+      
+      {% if site.author.location %}
+      <p class="about-location">📍 {{ site.author.location }}</p>
+      {% endif %}
+      
+      {% if site.author.mood %}
+      <p class="about-mood">
+        <strong>Current Mood:</strong> {{ site.author.mood }}
+      </p>
+      {% endif %}
+      
+      {% if site.author.icqNumber %}
+      <p class="about-icq">
+        <strong>ICQ:</strong> {{ site.author.icqNumber }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# Visitor Counter Widget #}
+{% if site.modules.visitorCounter %}
+<div class="widget widget-visitor-counter">
+  <h2 class="widget-title">Visitor Counter</h2>
+  <div class="widget-content">
+    <div class="visitor-counter {{ site.visitorCounter.style }}">
+      <p>You are visitor number:</p>
+      <div class="counter-display">
+        <span class="visitor-count">{{ site.visitorCounter.startNumber }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# Now Playing Widget #}
+{% if site.modules.nowPlaying %}
+<div class="widget widget-now-playing">
+  <h2 class="widget-title">🎵 Now Playing</h2>
+  <div class="widget-content">
+    <div class="now-playing-display">
+      <div class="winamp-style">
+        <div class="track-info">
+          <marquee behavior="scroll" scrollamount="2">
+            🎶 Your Favorite Song - Artist Name 🎶
+          </marquee>
+        </div>
+        <div class="player-controls">
+          <button class="player-btn">⏮️</button>
+          <button class="player-btn">▶️</button>
+          <button class="player-btn">⏸️</button>
+          <button class="player-btn">⏭️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# Updates Widget #}
+{% if site.modules.updates %}
+<div class="widget widget-updates">
+  <h2 class="widget-title">⭐ What's New!</h2>
+  <div class="widget-content">
+    <ul class="updates-list">
+      {% for update in updates.updates | limit(5) %}
+      <li class="update-item">
+        <span class="update-icon">{{ update.icon }}</span>
+        <div class="update-content">
+          <strong>{{ update.date | readableDate }}:</strong>
+          <span>{{ update.content }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{# Webring Widget #}
+{% if site.modules.webring %}
+{% include "components/webring.njk" %}
+{% endif %}
+
+{# Badge Wall Widget #}
+{% if site.modules.badgeWall %}
+<div class="widget widget-badges">
+  <h2 class="widget-title">88x31 Badges</h2>
+  <div class="widget-content">
+    <div class="badge-grid">
+      {% for category in badges.categories %}
+        {% for badge in category.badges | limit(6) %}
+          {% if badge.url %}
+            <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" title="{{ badge.title }}">
+              <img src="{{ badge.image }}" alt="{{ badge.alt }}" width="88" height="31" loading="lazy" onerror="this.style.display='none'">
+            </a>
+          {% else %}
+            <img src="{{ badge.image }}" alt="{{ badge.alt }}" width="88" height="31" loading="lazy" title="{{ badge.title }}" onerror="this.style.display='none'">
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <p class="widget-link">
+      <a href="/badges/">View all badges →</a>
+    </p>
+  </div>
+</div>
+{% endif %}
+
+{# Blogroll Widget #}
+{% if site.modules.blogroll %}
+<div class="widget widget-blogroll">
+  <h2 class="widget-title">Cool Links</h2>
+  <div class="widget-content">
+    {% set firstCategory = blogroll.categories[0] %}
+    {% if firstCategory %}
+      <ul class="blogroll-list">
+        {% for link in firstCategory.links | limit(5) %}
+        <li class="blogroll-item">
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+            {{ link.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="widget-link">
+        <a href="/links/">View all links →</a>
+      </p>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{# Ad Space / Support Widget #}
+{% if site.modules.adSpace %}
+<div class="widget widget-support">
+  <h2 class="widget-title">Support Me!</h2>
+  <div class="widget-content">
+    <div class="support-box">
+      <p>Like this site? Support my work!</p>
+      <a href="https://ko-fi.com/yourusername" class="support-button" target="_blank" rel="noopener noreferrer">
+        ☕ Buy me a coffee
+      </a>
+      <div class="parody-ad">
+        <img src="/images/ads/support-banner.gif" alt="Support this site" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# Music Player Widget #}
+{% if site.modules.musicPlayer %}
+{% include "components/music-player.njk" %}
+{% endif %}
+
+{# Cursor Effects Selector #}
+{% if site.modules.cursorEffects %}
+{% include "components/cursor-selector.njk" %}
+{% endif %}
+

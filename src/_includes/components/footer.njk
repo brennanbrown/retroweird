@@ -1,0 +1,94 @@
+<footer class="site-footer" role="contentinfo">
+  
+  {# Decorative footer divider #}
+  <div class="footer-divider">
+    <img src="/images/dividers/footer-line.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+  <div class="footer-content">
+    
+    {# Footer columns #}
+    <div class="footer-columns">
+      
+      {# About column #}
+      <div class="footer-column">
+        <h3>About This Site</h3>
+        <p>{{ site.description }}</p>
+        <p>A project by <a href="https://berryhouse.ca" target="_blank" rel="noopener">Berry House</a></p>
+        <p>Made with 💖 and nostalgia</p>
+      </div>
+      
+      {# Quick links column #}
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/links/">Links</a></li>
+          <li><a href="/badge-generator/">Badge Maker</a></li>
+          <li><a href="/feed.xml">📡 RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      {# Social/contact column #}
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <ul class="footer-social">
+          {% if site.social.email %}
+          <li>
+            <a href="mailto:{{ site.social.email }}" rel="me">
+              ✉️ Email
+            </a>
+          </li>
+          {% endif %}
+          {% if site.social.github %}
+          <li>
+            <a href="https://github.com/{{ site.social.github }}" rel="me" target="_blank">
+              🐙 GitHub
+            </a>
+          </li>
+          {% endif %}
+          {% if site.social.mastodon %}
+          <li>
+            <a href="{{ site.social.mastodon }}" rel="me" target="_blank">
+              🐘 Mastodon
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      
+    </div>
+    
+    {# Copyright and credits #}
+    <div class="footer-bottom">
+      <p class="copyright">
+        © {% year %} <a href="https://brennanbrown.ca" target="_blank" rel="noopener">Brennan Kenneth Brown</a> | 
+        Built with <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy</a> | 
+        Theme: <a href="https://github.com/brennanbrown/retroweird" target="_blank" rel="noopener">Retroweird</a> (MIT License)
+      </p>
+      <p class="license-info" style="font-size: 0.875rem; margin-top: 0.5rem;">
+        Code: <a href="https://github.com/brennanbrown/retroweird/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a> | 
+        Content: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">Public Domain (CC0)</a>
+      </p>
+      
+      {# Best viewed in badges #}
+      <div class="footer-badges">
+        <img src="/images/badges/best-viewed-any.gif" alt="Best viewed with any browser" width="88" height="31" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/badges/made-with-love.gif" alt="Made with love" width="88" height="31" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      
+      <p class="footer-motto">
+        🌈 Make the web weird again! 🌈
+      </p>
+    </div>
+    
+  </div>
+  
+  {# Animated footer decoration #}
+  <div class="footer-animation">
+    <img src="/images/animations/footer-sparkle.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+</footer>

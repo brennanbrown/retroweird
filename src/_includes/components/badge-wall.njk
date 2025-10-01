@@ -1,0 +1,72 @@
+<div class="badge-wall-page">
+  <h1>My Badge Collection</h1>
+  
+  <p class="badge-intro">
+    Check out all the cool 88x31 badges I've collected! These little graphics were everywhere in the early web. 
+    Feel free to grab my badge and add it to your site!
+  </p>
+  
+  {# My badge #}
+  <div class="my-badge-section">
+    <h2>📌 My Badge</h2>
+    <div class="my-badge">
+      <img src="{{ badges.myBadge.image }}" alt="{{ site.title }}" width="88" height="31" onerror="this.alt='Badge image not found'">
+    </div>
+    <div class="badge-code">
+      <h3>Add my badge to your site:</h3>
+      <pre><code>{{ badges.myBadge.code }}</code></pre>
+      <button class="copy-btn" onclick="copyBadgeCode()">Copy Code</button>
+    </div>
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  {# Badge categories #}
+  {% for category in badges.categories %}
+  <div class="badge-category">
+    <h2>{{ category.name }}</h2>
+    <div class="badge-grid">
+      {% for badge in category.badges %}
+      <div class="badge-item">
+        {% if badge.url %}
+          <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" title="{{ badge.title }}">
+            <img src="{{ badge.image }}" alt="{{ badge.alt }}" width="88" height="31" loading="lazy" onerror="this.alt='{{ badge.title }} (image not found)'">
+          </a>
+        {% else %}
+          <img src="{{ badge.image }}" alt="{{ badge.alt }}" width="88" height="31" loading="lazy" title="{{ badge.title }}" onerror="this.alt='{{ badge.title }} (image not found)'">
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true">
+  </div>
+  {% endfor %}
+  
+  {# Badge resources #}
+  <div class="badge-resources">
+    <h2>Badge Resources</h2>
+    <p>Want to find more badges or create your own?</p>
+    <ul>
+      <li><a href="https://cyber.dabamos.de/88x31/" target="_blank" rel="noopener noreferrer">88x31 Button Collection</a></li>
+      <li><a href="https://anlucas.neocities.org/88x31Buttons" target="_blank" rel="noopener noreferrer">A.N. Lucas's Button Collection</a></li>
+      <li><a href="https://hekate.neocities.org/srcandy/" target="_blank" rel="noopener noreferrer">Button Maker</a></li>
+    </ul>
+  </div>
+  
+</div>
+
+<script>
+function copyBadgeCode() {
+  const code = `{{ badges.myBadge.code }}`;
+  navigator.clipboard.writeText(code).then(() => {
+    alert('Badge code copied to clipboard!');
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+  });
+}
+</script>

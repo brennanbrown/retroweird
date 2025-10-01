@@ -1,0 +1,81 @@
+{# Cursor Effect Selector Widget #}
+
+{% if site.modules.cursorEffects %}
+<div class="widget widget-cursor-selector">
+  <h2 class="widget-title">✨ Cursor Effects</h2>
+  <div class="widget-content">
+    <p style="font-size: 0.875rem; margin-bottom: 1rem;">
+      Choose your cursor style:
+    </p>
+    
+    <div class="cursor-options">
+      <button onclick="setCursorEffect('default')" class="cursor-option-btn">
+        ⭐ Stars
+      </button>
+      <button onclick="setCursorEffect('sparkle')" class="cursor-option-btn">
+        ✨ Sparkles
+      </button>
+      <button onclick="setCursorEffect('rainbow')" class="cursor-option-btn">
+        🌈 Rainbow
+      </button>
+      <button onclick="setCursorEffect('hearts')" class="cursor-option-btn">
+        💕 Hearts
+      </button>
+      <button onclick="setCursorEffect('retroPointer')" class="cursor-option-btn">
+        👆 Pointer
+      </button>
+      <button onclick="setCursorEffect('none')" class="cursor-option-btn">
+        🚫 None
+      </button>
+    </div>
+    
+    <p style="font-size: 0.75rem; margin-top: 1rem; font-style: italic;">
+      <small>⚠️ Page will reload to apply changes</small>
+    </p>
+  </div>
+</div>
+
+<script>
+function setCursorEffect(effect) {
+  localStorage.setItem('cursor-effect', effect);
+  location.reload();
+}
+
+// Show currently selected cursor
+(function() {
+  const current = localStorage.getItem('cursor-effect') || 'default';
+  const buttons = document.querySelectorAll('.cursor-option-btn');
+  const effects = ['default', 'sparkle', 'rainbow', 'hearts', 'retroPointer', 'none'];
+  
+  buttons.forEach((btn, index) => {
+    if (effects[index] === current) {
+      btn.style.background = 'linear-gradient(135deg, #00ff00, #00ffff)';
+      btn.style.fontWeight = 'bold';
+    }
+  });
+})();
+</script>
+
+<style>
+.cursor-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.cursor-option-btn {
+  padding: 0.5rem;
+  background: #fff;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.cursor-option-btn:hover {
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+  transform: translateY(-2px);
+}
+</style>
+{% endif %}

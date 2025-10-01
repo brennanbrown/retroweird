@@ -1,0 +1,89 @@
+<header class="site-header" role="banner">
+  
+  {# Marquee announcement #}
+  {% if site.layout.showMarquee and site.modules.marquee %}
+  <div class="header-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="3">
+      {{ site.marqueeText }}
+    </marquee>
+  </div>
+  {% endif %}
+  
+  {# Site title and navigation #}
+  <div class="header-content">
+    
+    {# Site logo/title #}
+    <div class="site-branding">
+      <h1 class="site-title">
+        <a href="/">
+          <img src="/images/logo.gif" alt="{{ site.title }}" class="site-logo" onerror="this.style.display='none'">
+          <span class="site-title-text">{{ site.title }}</span>
+        </a>
+      </h1>
+      <p class="site-description">{{ site.description }}</p>
+    </div>
+    
+    {# Theme Switcher #}
+    <div class="theme-switcher">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select" aria-label="Choose theme">
+        <option value="default">GeoCities</option>
+        <option value="vaporwave">Vaporwave</option>
+        <option value="geocities">90s Max</option>
+        <option value="myspace">MySpace</option>
+        <option value="brutalist">Brutalist</option>
+        <option value="academia">Academia</option>
+      </select>
+    </div>
+    
+    {# Main navigation #}
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">
+            🏠 Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog/" class="nav-link {% if '/blog/' in page.url %}active{% endif %}">
+            📝 Blog
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/about/" class="nav-link {% if '/about/' in page.url %}active{% endif %}">
+            👤 About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/links/" class="nav-link {% if '/links/' in page.url %}active{% endif %}">
+            🔗 Links
+          </a>
+        </li>
+        {% if site.modules.guestbook %}
+        <li class="nav-item">
+          <a href="/guestbook/" class="nav-link {% if '/guestbook/' in page.url %}active{% endif %}">
+            📖 Guestbook
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a href="/contact/" class="nav-link {% if '/contact/' in page.url %}active{% endif %}">
+            ✉️ Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/badge-generator/" class="nav-link {% if '/badge-generator/' in page.url %}active{% endif %}">
+            🎨 Badge Maker
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+  
+  {# Decorative header image #}
+  <div class="header-decoration">
+    <img src="/images/dividers/header-decoration.gif" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  </div>
+  
+</header>

@@ -1,0 +1,60 @@
+<div class="blogroll-page">
+  <h1>🔗 My Blogroll & Cool Links</h1>
+  
+  <p class="blogroll-intro">
+    Here are some of my favorite sites around the web. Check them out! 
+    <button onclick="feelingLucky()" class="lucky-btn">🎲 I'm Feeling Lucky!</button>
+  </p>
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  {% for category in blogroll.categories %}
+  <div class="blogroll-category">
+    <h2>{{ category.name }}</h2>
+    <div class="links-grid">
+      {% for link in category.links %}
+      <div class="link-item {% if link.status == 'inactive' %}inactive{% endif %}">
+        <h3 class="link-title">
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" data-link="{{ link.url }}">
+            {{ link.title }}
+          </a>
+        </h3>
+        <p class="link-description">{{ link.description }}</p>
+        {% if link.status == 'inactive' %}
+        <span class="status-badge inactive">⚠️ Inactive</span>
+        {% else %}
+        <span class="status-badge active">✅ Active</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true">
+  </div>
+  {% endfor %}
+  
+  {# Link exchange info #}
+  <div class="link-exchange">
+    <h2>🤝 Link Exchange</h2>
+    <p>Want to exchange links? I'm always looking to discover new sites!</p>
+    <p><a href="/contact/">Contact me</a> to add your site to this list.</p>
+  </div>
+  
+</div>
+
+<script>
+function feelingLucky() {
+  // Get all active links
+  const links = Array.from(document.querySelectorAll('.link-item:not(.inactive) a[data-link]'))
+    .map(a => a.getAttribute('data-link'));
+  
+  if (links.length > 0) {
+    const randomLink = links[Math.floor(Math.random() * links.length)];
+    window.open(randomLink, '_blank');
+  }
+}
+</script>

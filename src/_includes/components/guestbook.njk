@@ -1,0 +1,110 @@
+<div class="guestbook-page">
+  <h1>📖 Sign My Guestbook!</h1>
+  
+  <p class="guestbook-intro">
+    Leave me a message! Let me know you were here and what you think of my site! 💬
+  </p>
+  
+  {# Guestbook form #}
+  {% if guestbook.config.enabled %}
+  <div class="guestbook-form-section">
+    <h2>✍️ Leave a Message</h2>
+    <form action="{{ guestbook.config.formEndpoint }}" method="POST" class="guestbook-form">
+      
+      <div class="form-group">
+        <label for="name">Name: <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required maxlength="50" placeholder="Your name">
+      </div>
+      
+      {% if guestbook.config.showWebsite %}
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" placeholder="https://yoursite.com">
+      </div>
+      {% endif %}
+      
+      {% if guestbook.config.showLocation %}
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" maxlength="50" placeholder="City, Country">
+      </div>
+      {% endif %}
+      
+      <div class="form-group">
+        <label for="message">Message: <span class="required">*</span></label>
+        <textarea 
+          id="message" 
+          name="message" 
+          required 
+          maxlength="{{ guestbook.config.maxMessageLength }}" 
+          rows="5" 
+          placeholder="Write your message here..."></textarea>
+        <small>Max {{ guestbook.config.maxMessageLength }} characters</small>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" class="submit-btn">📝 Sign Guestbook</button>
+      </div>
+      
+      {% if guestbook.config.requireApproval %}
+      <p class="form-note">
+        <small>⚠️ Messages require approval before appearing on the site.</small>
+      </p>
+      {% endif %}
+      
+    </form>
+  </div>
+  {% endif %}
+  
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  {# Guestbook entries #}
+  <div class="guestbook-entries">
+    <h2>📬 Guestbook Entries</h2>
+    
+    {% if guestbook.entries.length > 0 %}
+      {% for entry in guestbook.entries | reverse %}
+        {% if entry.approved %}
+        <div class="guestbook-entry">
+          <div class="entry-header">
+            <div class="entry-author">
+              <strong class="entry-name">
+                {% if entry.website %}
+                  <a href="{{ entry.website }}" target="_blank" rel="noopener noreferrer">{{ entry.name }}</a>
+                {% else %}
+                  {{ entry.name }}
+                {% endif %}
+              </strong>
+              {% if entry.location %}
+              <span class="entry-location">from {{ entry.location }}</span>
+              {% endif %}
+            </div>
+            <time class="entry-date" datetime="{{ entry.date }}">
+              {{ entry.date | readableDate }}
+            </time>
+          </div>
+          <div class="entry-message">
+            {{ entry.message }}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p class="no-entries">No entries yet. Be the first to sign the guestbook! ✨</p>
+    {% endif %}
+    
+  </div>
+  
+</div>
+
+<style>
+.guestbook-entry:nth-child(odd) {
+  background-color: #FFE4E1;
+}
+
+.guestbook-entry:nth-child(even) {
+  background-color: #E0FFFF;
+}
+</style>

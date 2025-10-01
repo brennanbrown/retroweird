@@ -1,0 +1,26 @@
+<div class="widget widget-webring">
+  <h2 class="widget-title">🔗 Webrings</h2>
+  <div class="widget-content">
+    {% for ring in webring.webrings %}
+      {% if ring.enabled %}
+      <div class="webring-section">
+        <h3 class="webring-name">{{ ring.name }}</h3>
+        <nav class="webring-nav" aria-label="{{ ring.name }} navigation">
+          <a href="{{ ring.previousUrl }}" class="webring-btn webring-prev" title="Previous site">
+            ← Prev
+          </a>
+          <a href="{{ ring.homeUrl }}" class="webring-btn webring-home" title="Webring home">
+            Home
+          </a>
+          <a href="{{ ring.randomUrl }}" class="webring-btn webring-random" title="Random site">
+            Random
+          </a>
+          <a href="{{ ring.nextUrl }}" class="webring-btn webring-next" title="Next site">
+            Next →
+          </a>
+        </nav>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
