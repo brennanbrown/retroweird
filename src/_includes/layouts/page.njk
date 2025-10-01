@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="static-page">
+  
+  <header class="page-header">
+    <h1 class="page-title">{{ title }}</h1>
+    
+    {% if description %}
+    <p class="page-description">{{ description }}</p>
+    {% endif %}
+  </header>
+  
+  {# Decorative divider #}
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  <div class="page-content">
+    {{ content | safe }}
+  </div>
+  
+  {# Decorative divider #}
+  <div class="divider">
+    <img src="/images/dividers/stars-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+</article>

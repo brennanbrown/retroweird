@@ -1,0 +1,115 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="h-entry blog-post">
+  
+  {# Post header #}
+  <header class="post-header">
+    
+    {# Optional banner image #}
+    {% if banner %}
+    <div class="post-banner">
+      <img src="{{ banner }}" alt="Post banner" loading="lazy">
+    </div>
+    {% endif %}
+    
+    <h1 class="p-name post-title">{{ title }}</h1>
+    
+    <div class="post-meta">
+      <time class="dt-published" datetime="{{ date | htmlDateString }}">
+        📅 {{ date | readableDate }}
+      </time>
+      
+      {% if mood %}
+      <span class="post-mood">😊 Mood: {{ mood }}</span>
+      {% endif %}
+      
+      {% if music %}
+      <span class="post-music">🎵 Listening to: {{ music }}</span>
+      {% endif %}
+    </div>
+    
+    {# Tags #}
+    {% if tags %}
+    <div class="post-tags">
+      {% for tag in tags %}
+        {% if tag != "posts" %}
+        <a href="/tags/{{ tag | slug }}/" class="p-category tag">{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+  </header>
+  
+  {# Decorative divider #}
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  {# Post content #}
+  <div class="e-content post-content">
+    {{ content | safe }}
+  </div>
+  
+  {# Decorative divider #}
+  <div class="divider">
+    <img src="/images/dividers/rainbow-line.gif" alt="" aria-hidden="true">
+  </div>
+  
+  {# Post footer #}
+  <footer class="post-footer">
+    
+    {# Permalink #}
+    <p class="post-permalink">
+      🔗 <a href="{{ page.url }}" class="u-url">Permalink to this post</a>
+    </p>
+    
+    {# Author info with h-card #}
+    <div class="h-card post-author">
+      <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}" class="u-photo author-avatar">
+      <div class="author-info">
+        <p>Written by <a href="{{ site.author.url }}" class="p-name u-url">{{ site.author.name }}</a></p>
+        <p class="p-note">{{ site.author.bio }}</p>
+      </div>
+    </div>
+    
+    {# Navigation to prev/next posts #}
+    <nav class="post-navigation" aria-label="Post navigation">
+      <div class="nav-links">
+        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+        
+        {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="nav-previous" rel="prev">
+          ← {{ previousPost.data.title }}
+        </a>
+        {% endif %}
+        
+        {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="nav-next" rel="next">
+          {{ nextPost.data.title }} →
+        </a>
+        {% endif %}
+      </div>
+    </nav>
+    
+    {# Webmentions placeholder #}
+    {% if site.features.webmentions %}
+    <div class="webmentions">
+      <h3>Responses & Mentions</h3>
+      <div id="webmentions-container">
+        <p>No responses yet. Be the first to respond to this post!</p>
+      </div>
+    </div>
+    {% endif %}
+    
+  </footer>
+  
+</article>
+
+{# Under construction notice #}
+<div class="construction-notice">
+  <img src="/images/under-construction.gif" alt="Under construction" loading="lazy">
+</div>

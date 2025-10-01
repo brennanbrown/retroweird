@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-{{ site.theme }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  
+  {# Open Graph / Social Meta Tags #}
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  
+  {# Favicon #}
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  {# RSS Feed #}
+  {% if site.features.rss %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  {% endif %}
+  
+  {# IndieWeb rel-me links #}
+  {% if site.social.github %}
+  <link rel="me" href="https://github.com/{{ site.social.github }}">
+  {% endif %}
+  {% if site.social.mastodon %}
+  <link rel="me" href="{{ site.social.mastodon }}">
+  {% endif %}
+  
+  {# Google Fonts - Retro Font Stack #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Press+Start+2P&family=VT323&family=Comic+Neue:wght@400;700&family=Indie+Flower&family=Orbitron:wght@400;700&family=Courier+Prime:wght@400;700&family=Righteous&family=Monoton&display=swap" rel="stylesheet">
+  
+  {# Stylesheets #}
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components/components.css">
+  <link rel="stylesheet" href="/css/themes/{{ site.theme }}.css" id="theme-stylesheet">
+  
+  {# Microformats for IndieWeb #}
+  <meta name="author" content="{{ site.author.name }}">
+</head>
+<body style="
+  background-color: {{ site.layout.backgroundColor }};
+  {% if site.layout.backgroundImage %}background-image: url('/images/backgrounds/{{ site.layout.backgroundImage }}');{% endif %}
+  font-family: {{ site.layout.fontFamily }};
+">
+  
+  {# Skip to content link for accessibility #}
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  {# Header with marquee #}
+  {% include "components/header.njk" %}
+  
+  {# Main layout container #}
+  <div class="page-container">
+    
+    {# Sidebar #}
+    {% if site.layout.sidebar == "left" %}
+      <aside class="sidebar sidebar-left">
+        {% include "components/sidebar.njk" %}
+      </aside>
+    {% endif %}
+    
+    {# Main content area #}
+    <main id="main-content" class="main-content">
+      <div class="content-wrapper">
+        {{ content | safe }}
+      </div>
+    </main>
+    
+    {# Right sidebar #}
+    {% if site.layout.sidebar == "right" %}
+      <aside class="sidebar sidebar-right">
+        {% include "components/sidebar.njk" %}
+      </aside>
+    {% endif %}
+    
+  </div>
+  
+  {# Footer #}
+  {% include "components/footer.njk" %}
+  
+  {# JavaScript #}
+  <script src="/js/retro-effects.js"></script>
+  
+  {# Custom cursor effects #}
+  {% if site.modules.cursorEffects %}
+  <script src="/js/custom-cursors.js"></script>
+  {% endif %}
+  
+  {# Theme switcher script #}
+  <script>
+    // Theme switcher functionality
+    (function() {
+      const themeSelect = document.getElementById('theme-select');
+      const themeStylesheet = document.getElementById('theme-stylesheet');
+      if (!themeSelect || !themeStylesheet) return;
+      
+      // Get current theme from class
+      const currentTheme = document.documentElement.className.replace('theme-', '');
+      themeSelect.value = currentTheme || 'default';
+      
+      // Handle theme change
+      themeSelect.addEventListener('change', function() {
+        const newTheme = this.value;
+        
+        // Update HTML class
+        document.documentElement.className = 'theme-' + newTheme;
+        
+        // Update stylesheet href
+        themeStylesheet.href = '/css/themes/' + newTheme + '.css';
+        
+        // Save preference
+        localStorage.setItem('preferred-theme', newTheme);
+      });
+      
+      // Load saved preference on page load
+      const savedTheme = localStorage.getItem('preferred-theme');
+      if (savedTheme && savedTheme !== currentTheme) {
+        themeSelect.value = savedTheme;
+        document.documentElement.className = 'theme-' + savedTheme;
+        themeStylesheet.href = '/css/themes/' + savedTheme + '.css';
+      }
+    })();
+  </script>
+  
+  {# Visitor counter script #}
+  {% if site.modules.visitorCounter %}
+  <script>
+    // Simple visitor counter animation
+    const counterEl = document.querySelector('.visitor-count');
+    if (counterEl) {
+      let count = {{ site.visitorCounter.startNumber }};
+      // Add random increment for demo purposes
+      count += Math.floor(Math.random() * 100);
+      
+      // Animate counter
+      let current = {{ site.visitorCounter.startNumber }};
+      const interval = setInterval(() => {
+        current += Math.floor((count - current) / 10) + 1;
+        if (current >= count) {
+          current = count;
+          clearInterval(interval);
+        }
+        counterEl.textContent = current.toString().padStart(6, '0');
+      }, 50);
+    }
+  </script>
+  {% endif %}
+  
+</body>
+</html>
