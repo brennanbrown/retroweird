@@ -385,3 +385,95 @@
   50% { transform: translate(1px, -1px); }
   75% { transform: translate(-1px, -1px); }
 }
+
+/* Comprehensive color coverage */
+.theme-brutalist .footer-column h3 {
+  color: #FF0000;
+}
+
+.theme-brutalist .footer-links a,
+.theme-brutalist .footer-social a {
+  color: #00FF00;
+}
+
+.theme-brutalist .footer-links a:hover,
+.theme-brutalist .footer-social a:hover {
+  color: #FFFF00;
+  text-decoration: line-through;
+}
+
+.theme-brutalist .copyright,
+.theme-brutalist .license-info {
+  color: #00FF00;
+}
+
+.theme-brutalist .copyright a,
+.theme-brutalist .license-info a {
+  color: #FF0000;
+}
+
+.theme-brutalist .post-card h3,
+.theme-brutalist .feature-card h3 {
+  color: #FFFF00;
+}
+
+.theme-brutalist .post-card a:not(.btn),
+.theme-brutalist .feature-card a:not(.btn) {
+  color: #00FF00;
+}
+
+.theme-brutalist .post-meta {
+  color: #0000FF;
+}
+
+.theme-brutalist .widget-content a:not(.btn) {
+  color: #00FF00;
+}
+
+.theme-brutalist .widget-content {
+  color: #00FF00;
+}
+
+.theme-brutalist .about-me-card {
+  color: #00FF00;
+}
+
+.theme-brutalist .blogroll-list a {
+  color: #00FF00;
+}
+
+.theme-brutalist .blogroll-list a:hover {
+  color: #FFFF00;
+}
+
+.theme-brutalist blockquote {
+  border-left-color: #FF0000;
+  background: rgba(255, 0, 0, 0.1);
+  color: #00FF00;
+}
+
+.theme-brutalist code {
+  background: #FF0000;
+  color: #000000;
+}
+
+.theme-brutalist pre {
+  background: #000000;
+  border: 3px solid #00FF00;
+  color: #00FF00;
+}
+
+.theme-brutalist .theme-switcher {
+  background: #000000;
+  border-color: #00FF00;
+}
+
+.theme-brutalist .theme-switcher label {
+  color: #FF0000;
+}
+
+.theme-brutalist .theme-switcher select {
+  background: #000000;
+  border-color: #00FF00;
+  color: #00FF00;
+}

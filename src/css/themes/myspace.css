@@ -375,3 +375,92 @@
 .theme-myspace .site-footer {
   border-radius: 5px;
 }
+
+/* Comprehensive color coverage */
+.theme-myspace .footer-column h3 {
+  color: #0066CC;
+}
+
+.theme-myspace .footer-links a,
+.theme-myspace .footer-social a {
+  color: #0066CC;
+}
+
+.theme-myspace .footer-links a:hover,
+.theme-myspace .footer-social a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+.theme-myspace .copyright,
+.theme-myspace .license-info {
+  color: #333333;
+}
+
+.theme-myspace .copyright a,
+.theme-myspace .license-info a {
+  color: #0066CC;
+}
+
+.theme-myspace .post-card h3,
+.theme-myspace .feature-card h3 {
+  color: #0066CC;
+}
+
+.theme-myspace .post-card a:not(.btn),
+.theme-myspace .feature-card a:not(.btn) {
+  color: #0066CC;
+}
+
+.theme-myspace .widget-content a:not(.btn) {
+  color: #0066CC;
+}
+
+.theme-myspace .widget-content {
+  color: #333333;
+}
+
+.theme-myspace .about-me-card {
+  color: #333333;
+}
+
+.theme-myspace .blogroll-list a {
+  color: #0066CC;
+}
+
+.theme-myspace .blogroll-list a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+.theme-myspace blockquote {
+  border-left-color: #0066CC;
+  background: rgba(0, 102, 204, 0.1);
+  color: #333333;
+}
+
+.theme-myspace code {
+  background: #E8F4FF;
+  color: #333333;
+}
+
+.theme-myspace pre {
+  background: #F5F5F5;
+  border: 1px solid #CCCCCC;
+  color: #333333;
+}
+
+.theme-myspace .theme-switcher {
+  background: #FFFFFF;
+  border-color: #CCCCCC;
+}
+
+.theme-myspace .theme-switcher label {
+  color: #333333;
+}
+
+.theme-myspace .theme-switcher select {
+  background: #FFFFFF;
+  border-color: #CCCCCC;
+  color: #333333;
+}

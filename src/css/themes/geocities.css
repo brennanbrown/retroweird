@@ -330,3 +330,96 @@
 .theme-geocities .site-footer {
   border-style: ridge !important;
 }
+
+/* Comprehensive color coverage */
+.theme-geocities .footer-column h3 {
+  color: #FF0000;
+}
+
+.theme-geocities .footer-links a,
+.theme-geocities .footer-social a {
+  color: #0000FF;
+}
+
+.theme-geocities .footer-links a:hover,
+.theme-geocities .footer-social a:hover {
+  color: #FF0000;
+  background: #FFFF00;
+}
+
+.theme-geocities .copyright,
+.theme-geocities .license-info {
+  color: #000000;
+}
+
+.theme-geocities .copyright a,
+.theme-geocities .license-info a {
+  color: #FF0000;
+}
+
+.theme-geocities .post-card h3,
+.theme-geocities .feature-card h3 {
+  color: #FF0000;
+}
+
+.theme-geocities .post-card a:not(.btn),
+.theme-geocities .feature-card a:not(.btn) {
+  color: #0000FF;
+}
+
+.theme-geocities .post-meta {
+  color: #008000;
+}
+
+.theme-geocities .widget-content a:not(.btn) {
+  color: #0000FF;
+}
+
+.theme-geocities .widget-content {
+  color: #000000;
+}
+
+.theme-geocities .about-me-card {
+  color: #000000;
+}
+
+.theme-geocities .blogroll-list a {
+  color: #0000FF;
+}
+
+.theme-geocities .blogroll-list a:hover {
+  color: #FF0000;
+  background: #FFFF00;
+}
+
+.theme-geocities blockquote {
+  border-left-color: #FF0000;
+  background: rgba(255, 255, 0, 0.2);
+  color: #000000;
+}
+
+.theme-geocities code {
+  background: #FFFF00;
+  color: #000000;
+}
+
+.theme-geocities pre {
+  background: #FFFFCC;
+  border: 3px solid #000000;
+  color: #000000;
+}
+
+.theme-geocities .theme-switcher {
+  background: #FFFF99;
+  border-color: #000000;
+}
+
+.theme-geocities .theme-switcher label {
+  color: #FF0000;
+}
+
+.theme-geocities .theme-switcher select {
+  background: #FFFFCC;
+  border-color: #000000;
+  color: #000000;
+}

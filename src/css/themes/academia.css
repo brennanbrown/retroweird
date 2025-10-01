@@ -483,3 +483,73 @@
   font-size: 16px;
   line-height: 1.6;
 }
+
+/* Comprehensive color coverage */
+.theme-academia .footer-column h3 {
+  color: #000080;
+}
+
+.theme-academia .footer-links a,
+.theme-academia .footer-social a {
+  color: #0000EE;
+}
+
+.theme-academia .footer-links a:hover,
+.theme-academia .footer-social a:hover {
+  color: #8B0000;
+}
+
+.theme-academia .copyright,
+.theme-academia .license-info {
+  color: #000000;
+}
+
+.theme-academia .copyright a,
+.theme-academia .license-info a {
+  color: #0000EE;
+}
+
+.theme-academia .post-card h3,
+.theme-academia .feature-card h3 {
+  color: #000080;
+}
+
+.theme-academia .post-card a:not(.btn),
+.theme-academia .feature-card a:not(.btn) {
+  color: #0000EE;
+}
+
+.theme-academia .widget-content a:not(.btn) {
+  color: #0000EE;
+}
+
+.theme-academia .widget-content {
+  color: #000000;
+}
+
+.theme-academia .about-me-card {
+  color: #000000;
+}
+
+.theme-academia .blogroll-list a {
+  color: #0000EE;
+}
+
+.theme-academia .blogroll-list a:hover {
+  color: #551A8B;
+}
+
+.theme-academia .theme-switcher {
+  background: #F5F5F5;
+  border-color: #000000;
+}
+
+.theme-academia .theme-switcher label {
+  color: #000000;
+}
+
+.theme-academia .theme-switcher select {
+  background: #FFFFFF;
+  border-color: #000000;
+  color: #000000;
+}

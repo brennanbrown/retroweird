@@ -266,3 +266,94 @@
   border-color: #FF71CE;
   box-shadow: 0 0 15px rgba(255, 113, 206, 0.5);
 }
+
+/* Comprehensive color coverage */
+.theme-vaporwave .footer-column h3 {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .footer-links a,
+.theme-vaporwave .footer-social a {
+  color: #01CDFE;
+}
+
+.theme-vaporwave .footer-links a:hover,
+.theme-vaporwave .footer-social a:hover {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .copyright,
+.theme-vaporwave .license-info {
+  color: #FFFFFF;
+}
+
+.theme-vaporwave .copyright a,
+.theme-vaporwave .license-info a {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .post-card h3,
+.theme-vaporwave .feature-card h3 {
+  color: #01CDFE;
+}
+
+.theme-vaporwave .post-card a:not(.btn),
+.theme-vaporwave .feature-card a:not(.btn) {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .post-meta {
+  color: #B967FF;
+}
+
+.theme-vaporwave .widget-content a:not(.btn) {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .widget-content {
+  color: #FFFFFF;
+}
+
+.theme-vaporwave .about-me-card {
+  color: #FFFFFF;
+}
+
+.theme-vaporwave .blogroll-list a {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .blogroll-list a:hover {
+  color: #01CDFE;
+}
+
+.theme-vaporwave blockquote {
+  border-left-color: #FF71CE;
+  background: rgba(255, 113, 206, 0.1);
+  color: #FFFFFF;
+}
+
+.theme-vaporwave code {
+  background: rgba(1, 205, 254, 0.2);
+  color: #01CDFE;
+}
+
+.theme-vaporwave pre {
+  background: rgba(5, 3, 26, 0.9);
+  border: 2px solid #B967FF;
+  color: #01CDFE;
+}
+
+.theme-vaporwave .theme-switcher {
+  background: rgba(5, 3, 26, 0.9);
+  border-color: #01CDFE;
+}
+
+.theme-vaporwave .theme-switcher label {
+  color: #FF71CE;
+}
+
+.theme-vaporwave .theme-switcher select {
+  background: rgba(5, 3, 26, 0.8);
+  border-color: #01CDFE;
+  color: #FFFFFF;
+}
